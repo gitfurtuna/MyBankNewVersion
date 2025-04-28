@@ -1,0 +1,59 @@
+services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - './nginx.conf:/etc/nginx/nginx.conf'
+    networks:
+      - dev
+    depends_on:
+      - backend
+      - frontend
+
+  backend:
+    build:
+      context: ./authservice
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    #restart: always
+    networks:
+      - dev
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/mybank
+      SPRING_DATASOURCE_USERNAME: myandyour
+      SPRING_DATASOURCE_PASSWORD: 123
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend_my_bank
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+   # restart: always
+    depends_on:
+      - backend
+    networks:
+      - dev
+
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+   # restart: always
+    networks:
+      - dev
+    environment:
+      POSTGRES_DB: mybank
+      POSTGRES_USER: myandyour
+      POSTGRES_PASSWORD: 123
+    volumes:
+      - db_data:/var/lib/postgresql/data
+volumes:
+  db_data:
+
+networks:
+  dev:
