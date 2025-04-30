@@ -7,6 +7,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.awt.*;
+import java.sql.Blob;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -58,6 +60,9 @@ public class User implements UserDetails{
 
         @Setter(AccessLevel.NONE)
         private long countAttendanceDays;
+
+        @Builder.Default
+        private Photo photo = null;
 
 
     public long getCountAttendanceDays() {

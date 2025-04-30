@@ -1,7 +1,10 @@
 package com.mybank.authservice_my_bank.datasource.model;
 
+import com.mybank.authservice_my_bank.domain.model.Photo;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.awt.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -48,5 +51,9 @@ public class UserEntity {
 
         @Column(name = "user_role", nullable = false)
         private String role;
+
+        @Column(name = "user_photo")
+        @Lob
+        private byte[] bytes;
 
 }

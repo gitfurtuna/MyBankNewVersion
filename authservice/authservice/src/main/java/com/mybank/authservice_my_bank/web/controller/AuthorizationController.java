@@ -21,15 +21,28 @@ public class AuthorizationController {
 
     private final AuthenticationService authenticationService;
 
+//    @PreAuthorize("hasAuthority('USER')")
+//    @GetMapping("/user")
+//    public ResponseEntity<Map<String, String>> helloUser() {
+//        final JwtAuthentication authInfo = authenticationService.getAuthInfo();
+//        Map<String, String> response = new HashMap<>();
+//        response.put("name", authInfo.getName());
+//        response.put("email", authInfo.getEmail());
+//        response.put("role", String.valueOf(authInfo.getRole()));
+//        return ResponseEntity.status(HttpStatus.OK).body(response);
+//    }
     @PreAuthorize("hasAuthority('USER')")
-    @GetMapping("/user")
+    @GetMapping("/hello")
     public ResponseEntity<Map<String, String>> helloUser() {
         final JwtAuthentication authInfo = authenticationService.getAuthInfo();
         Map<String, String> response = new HashMap<>();
         response.put("name", authInfo.getName());
         response.put("email", authInfo.getEmail());
+        response.put("role", String.valueOf(authInfo.getRole()));
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
+
+
 
     @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/admin")
