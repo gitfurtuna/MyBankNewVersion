@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ae4a6ba5-2f46-4c39-8cd6-49338d939d64" name="Changes" comment="new layers">
+      <change afterPath="$PROJECT_DIR$/authservice/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/datasource/mapper/DataDomainUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/datasource/data/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/datasource/data/DataInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/datasource/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/datasource/model/UserStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/datasource/model/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/datasource/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/datasource/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/di/mappers/UserFromAuthJwtRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/di/mappers/UserFromRegistrationRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/di/mappers/UserFromUserEntityMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/di/mappers/UserToUserEntityMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/di/security/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/di/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/di/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/di/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/domain/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/domain/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/domain/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/domain/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/domain/service/RegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/domain/service/RegistrationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/mapper/WebDomainUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/model/AuthJWTRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/model/AuthJWTRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/model/AuthJWTResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/model/AuthJWTResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/model/RefreshJwtRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/model/RefreshJwtRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/model/RegistrationRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/model/RegistrationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/model/RegistrationResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/authservice/src/main/java/com/mybank/authservice_my_bank/web/model/RegistrationResponse.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="User &lt;ofurtuna@internet.ru&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gitfurtuna&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gitfurtuna/authservice.git&quot;,
+    &quot;accountId&quot;: &quot;277f559a-feb0-48d7-95c3-8ea1bce6a632&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2vlexVpMP8tPwXnxrSAaTTIzgCv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AuthserviceApplication.executor": "Run",
+    "Application.AuthserviceApplicationTests$Test.executor": "Run",
+    "Application.com.mybank.authservice.AuthserviceApplication.executor": "Run",
+    "Application.com.mybank.authservice_my_bank.AuthserviceApplication.executor": "Run",
+    "JUnit.AuthserviceApplicationTests.contextLoads.executor": "Run",
+    "JUnit.AuthserviceApplicationTests.executor": "Run",
+    "LombokPluginIS_LOMBOK_JPS_FIX_ENABLED": "true",
+    "Maven.Unknown [clean].executor": "Run",
+    "Maven.Unknown [install].executor": "Run",
+    "Maven.authservice [clean].executor": "Run",
+    "Maven.authservice [compile].executor": "Run",
+    "Maven.authservice [install].executor": "Run",
+    "Maven.authservice [package].executor": "Run",
+    "Maven.authservice [validate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "develop",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/Downloads/clouds-docker-impl-241.18034.82.zip",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.com.mybank.authservice_my_bank.AuthserviceApplication">
+    <configuration name="AuthserviceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.authservice.AuthserviceApplication" />
+      <module name="authservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.authservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthserviceApplicationTests$Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.authservice.AuthserviceApplicationTests$Test" />
+      <module name="authservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.authservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.mybank.authservice_my_bank.AuthserviceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mybank.authservice_my_bank.AuthserviceApplication" />
+      <module name="authservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mybank.authservice_my_bank.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthserviceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="authservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.authservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.authservice" />
+      <option name="MAIN_CLASS_NAME" value="com.example.authservice.AuthserviceApplicationTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthserviceApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="authservice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.authservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.authservice" />
+      <option name="MAIN_CLASS_NAME" value="com.example.authservice.AuthserviceApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.com.mybank.authservice_my_bank.AuthserviceApplication" />
+        <item itemvalue="JUnit.AuthserviceApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.AuthserviceApplicationTests" />
+        <item itemvalue="Application.AuthserviceApplicationTests$Test" />
+        <item itemvalue="Application.AuthserviceApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae4a6ba5-2f46-4c39-8cd6-49338d939d64" name="Changes" comment="" />
+      <created>1744724334901</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744724334901</updated>
+    </task>
+    <task id="LOCAL-00001" summary="new project">
+      <option name="closed" value="true" />
+      <created>1744837005513</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744837005513</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <option name="closed" value="true" />
+      <created>1745051226062</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1745051226063</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update">
+      <option name="closed" value="true" />
+      <created>1745087698203</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745087698205</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update">
+      <option name="closed" value="true" />
+      <created>1745087711105</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745087711105</updated>
+    </task>
+    <task id="LOCAL-00005" summary="new layers">
+      <option name="closed" value="true" />
+      <created>1745251980332</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1745251980332</updated>
+    </task>
+    <task id="LOCAL-00006" summary="new layers">
+      <option name="closed" value="true" />
+      <created>1745294263018</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1745294263018</updated>
+    </task>
+    <task id="LOCAL-00007" summary="new layers">
+      <option name="closed" value="true" />
+      <created>1745294268797</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1745294268797</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new project" />
+    <MESSAGE value="update" />
+    <MESSAGE value="new layers" />
+    <option name="LAST_COMMIT_MESSAGE" value="new layers" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
+  </component>
+</project>
