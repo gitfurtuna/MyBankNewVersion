@@ -17,16 +17,10 @@
         </processorPath>
         <module name="authservice" />
       </profile>
-      <profile name="Annotation profile for authservice_my_bank" enabled="true">
+      <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath>
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar" />
-        </processorPath>
-        <module name="authservice_my_bank" />
       </profile>
     </annotationProcessing>
   </component>
@@ -34,6 +28,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="authservice" options="-parameters" />
       <module name="authservice_my_bank" options="-parameters" />
+      <module name="merch" options="-parameters" />
     </option>
   </component>
 </project>

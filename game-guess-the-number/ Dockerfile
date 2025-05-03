@@ -1,4 +1,0 @@
-FROM openjdk:11-jre-slim
-WORKDIR WORKDIR /app
-COPY . .
-CMD ["java", "Game"]

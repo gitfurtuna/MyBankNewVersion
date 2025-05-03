@@ -10,6 +10,46 @@ services:
     depends_on:
       - backend
       - frontend
+#      - merch
+
+#  kafka:
+#    image: 'bitnami/kafka:latest'
+#    ports:
+#      - '9092:9092'
+#    environment:
+#      KAFKA_CFG_ZOOKEEPER_CONNECT: zookeeper:2181
+#      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+#      KAFKA_CFG_LISTENERS: PLAINTEXT://0.0.0.0:9092
+#      KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE: "true"
+#    depends_on:
+#      - zookeeper
+#    networks:
+#      - dev
+#
+#  zookeeper:
+#    image: 'bitnami/zookeeper:latest'
+#    ports:
+#      - '2181:2181'
+#    environment:
+#      ZOOKEEPER_CLIENT_PORT: 2181
+#    networks:
+#      - dev
+
+#  merch:
+#    build:
+#      context: ./merch
+#      dockerfile:  Dockerfile
+#    ports:
+#      - "8081:8081"
+#    #restart: always
+#    networks:
+#      - dev
+#    environment:
+#      SPRING_DATASOURCE_URL: jdbc:postgresql://db_merch:5432/merchdb
+#      SPRING_DATASOURCE_USERNAME: merchuser
+#      SPRING_DATASOURCE_PASSWORD: merch123
+#    depends_on:
+#     - db_merch
 
   backend:
     build:
@@ -21,11 +61,11 @@ services:
     networks:
       - dev
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/mybank
-      SPRING_DATASOURCE_USERNAME: myandyour
-      SPRING_DATASOURCE_PASSWORD: 123
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db_auth:5432/authdb
+      SPRING_DATASOURCE_USERNAME: authuser
+      SPRING_DATASOURCE_PASSWORD: auth123
     depends_on:
-      - db
+      - db_auth
 
   frontend:
     build:
@@ -39,7 +79,7 @@ services:
     networks:
       - dev
 
-  db:
+  db_auth:
     image: postgres:latest
     ports:
       - "5432:5432"
@@ -47,13 +87,29 @@ services:
     networks:
       - dev
     environment:
-      POSTGRES_DB: mybank
-      POSTGRES_USER: myandyour
-      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: authdb
+      POSTGRES_USER: authuser
+      POSTGRES_PASSWORD: auth123
     volumes:
-      - db_data:/var/lib/postgresql/data
+      - db_auth:/var/lib/postgresql/data
+
+#  db_merch:
+#    image: postgres:latest
+#    ports:
+#      - "5433:5432"
+#    # restart: always
+#    networks:
+#      - dev
+#    environment:
+#      POSTGRES_DB: merchdb
+#      POSTGRES_USER: merchuser
+#      POSTGRES_PASSWORD: merch123
+#    volumes:
+#      - db_auth:/var/lib/postgresql/data
+
 volumes:
-  db_data:
+  db_auth:
+#  db_merch:
 
 networks:
   dev:

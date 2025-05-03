@@ -5,11 +5,15 @@ import com.mybank.merch.datasource.repository.MerchRepository;
 import com.mybank.merch.domain.model.Merch;
 import org.mapstruct.Mapper;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring")
 public interface DataDomainMerchMapper {
 
     Merch toMerch (MerchEntity merchEntity);
 
     MerchEntity fromMerch (Merch merch);
+
+    List<Merch> toMerchList (List<MerchEntity> merchEntityList);
 
 }

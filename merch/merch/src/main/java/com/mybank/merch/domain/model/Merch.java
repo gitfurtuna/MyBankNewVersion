@@ -1,10 +1,12 @@
 package com.mybank.merch.domain.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.Setter;
 
 @Data
+@Builder
 @AllArgsConstructor
 public class Merch {
 
