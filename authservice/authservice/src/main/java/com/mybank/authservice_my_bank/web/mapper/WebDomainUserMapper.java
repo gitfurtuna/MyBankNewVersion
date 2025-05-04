@@ -13,4 +13,6 @@ public interface WebDomainUserMapper {
     RegistrationResponse fromUser (User user);
 
     User toUserFromRegister(RegistrationRequest registrationRequest);
+
+    RegistrationRequest fromUserToRegistrationRequest(User user);
 }

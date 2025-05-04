@@ -81,7 +81,12 @@ function RegistrationForm() {
                 setDateOfBirth('');
                 setPhoneNumber('');
 
-             }
+
+                setTimeout(() => {
+                navigate('/login');
+                }, 100);
+                                         }
+
              }catch (error) {
                  console.error('Registration error:', error);
                  if (error.response) {

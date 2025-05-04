@@ -52,8 +52,8 @@ public class UserEntity {
         @Column(name = "user_role", nullable = false)
         private String role;
 
-        @Column(name = "user_photo")
-        @Lob
-        private byte[] bytes;
+        @OneToOne(cascade = CascadeType.ALL)
+        @JoinColumn(name = "photo_id")
+        private PhotoEntity photo;
 
 }

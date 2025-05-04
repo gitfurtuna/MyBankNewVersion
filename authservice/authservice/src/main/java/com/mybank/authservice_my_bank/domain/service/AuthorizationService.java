@@ -8,6 +8,7 @@ import com.mybank.authservice_my_bank.domain.model.Photo;
 import com.mybank.authservice_my_bank.domain.model.User;
 import com.mybank.authservice_my_bank.web.model.RegistrationRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -19,7 +20,9 @@ public class AuthorizationService {
 
     private final UserRepository userRepository;
 
-    final DataDomainUserMapper dataDomainUserMapper;
+    private final DataDomainUserMapper dataDomainUserMapper;
+
+    private final PasswordEncoder passwordEncoder;
 
     public User updatePhoto(String email, MultipartFile file) throws IOException {
         Photo photo = null;
@@ -39,7 +42,15 @@ public class AuthorizationService {
     }
 
  public User updateProfile(User user) {
-
+     UserEntity userEntity = userRepository.findByEmail(user.getEmail())
+             .orElseThrow(() -> new NotFoundUserException("User with " + user.getEmail() + " is not found"));
+     userEntity.setPassword(passwordEncoder.encode(user.getPassword()));
+     userEntity.setEmail(user.getEmail());
+     userEntity.setName(user.getName());
+     userEntity.setSurname(user.getSurname());
+     userEntity.setDateOfBirth(user.getDateOfBirth());
+     userEntity.setPhoneNumber(user.getPhoneNumber());
+     return dataDomainUserMapper.toUser(userRepository.save(userEntity));
  }
 
 }

@@ -38,7 +38,7 @@ function AuthenticationForm() {
                                          setPassword('');
 
                                          setTimeout(() => {
-                                                         navigate('/user');
+                                                         navigate('/hello');
                                                      }, 100);
                                          }
                                          }catch (error) {

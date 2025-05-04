@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import RegistrationForm from './pages/RegistrationForm';
 import AuthenticationForm from './pages/AuthenticationForm';
 import UserHomePageForm from './pages/UserHomePageForm';
+import UserProfile from './pages/UserProfile';
+import UserFriends from './pages/UserFriends';
 import Layout from './components/Layout';
 import './App.css';
 import myLogo from './assets/logo.png';
@@ -15,7 +17,9 @@ function App() {
           <Routes>
             <Route path="/register" element={<RegistrationForm />} />
             <Route path="/login" element={<AuthenticationForm />} />
-            <Route path="/user" element={<UserHomePageForm />} />
+            <Route path="/hello" element={<UserHomePageForm />} />
+            <Route path="/profile" element={<UserProfile />} />
+            <Route path="/friends" element={<UserFriends />} />
             <Route path="/" element={
               <div className="image-container h1">
                 <h1>Welcome!
