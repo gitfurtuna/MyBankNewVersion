@@ -58,6 +58,23 @@ public class AuthorizationController {
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
+    @PostMapping("/logout")
+    public ResponseEntity<String> logout(HttpServletResponse response) {
+        Cookie accessCookie = new Cookie("access_token", null);
+        accessCookie.setHttpOnly(true);
+        accessCookie.setPath("/");
+        accessCookie.setMaxAge(0);
+        response.addCookie(accessCookie);
+
+        Cookie refreshCookie = new Cookie("refresh_token", null);
+        refreshCookie.setHttpOnly(true);
+        refreshCookie.setPath("/");
+        refreshCookie.setMaxAge(0);
+        response.addCookie(refreshCookie);
+
+        return ResponseEntity.status(HttpStatus.OK).body("Logged out successfully");
+    }
+
     @PutMapping("profile/{role}/{email}/update")
     public ResponseEntity<RegistrationRequest> updateProfile(@PathVariable String role ,
                                               @PathVariable String email,
